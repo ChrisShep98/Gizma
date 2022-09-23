@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800&display=swap');
+
+body{
+    background-color: rgba(105,24,241,255); 
+} 
+/* NAV */ 
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 4% 8% 0 0;
+}
+
+li, a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10%;
+    font-family: Poppins;
+    font-weight: 500;
+    margin: 0 4% 0 0;
+}
+
+a:hover{
+    background-color: black;
+}
+
+/* Welcome page */
+
+h1, .gizText{
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 4.5rem;
+    color: white;
+    margin: 0;
+}
+
+.gizText{
+    font-weight: 600;
+    /* color: #f4a111; */
+    margin-left: 12rem;
+    font-size: 6rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.h1AndText{
+    border: 3px solid white;
+    text-align: center;
+    margin-right: 15rem;
+    font-family: Raleway;
+    color: white;
+    margin-top: 5rem;
+    padding: 3rem;
+}
+
+/* .bgDot{
+    height: 15rem;
+    width: 15rem;
+    margin: 15rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+  } */
