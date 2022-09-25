@@ -10,10 +10,12 @@ const togglePassword = document.querySelectorAll('.togglePassword').forEach(item
     })
 })
 
-console.log(password)
+// Popup form for creating a workout
 
-// const password = document.querySelectorAll('.password')
-// const togglePassword = document.querySelectorAll('.togglePassword')
-
-
-// console.log(password)
+function openForm() {
+    document.getElementById("initalForm").style.display = "block";
+  }
+  
+function closeForm() {
+    document.getElementById("initalForm").style.display = "none";
+  }

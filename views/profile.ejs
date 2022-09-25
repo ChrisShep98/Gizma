@@ -1,5 +1,57 @@
-<%- include('partials/header') -%>
-<div class="container">
+<%- include('partials/headerloggedin') -%>
+  <div class="container mx-auto min-h-screen bg-red-300">
+    <div class="">
+      <div class="flex justify-around p-20">
+        <button onclick="openForm()" class="px-6 py-3 text-lg bg-slate-700 text-white">Create</button>
+        <p>Profile info here</p>
+      </div>
+      <div class="flex justify-center">
+        <p>Your Plans</p>
+      </div>
+      <div class="flex flex-wrap justify-center items-center">
+        <div class="border p-24 m-4">
+          Workout1
+        </div>
+        <div class="border p-24 m-4">
+          Workout2
+        </div>
+        <div class="border p-24 m-4">
+          Workout3
+        </div>
+        <div class="border p-24 m-4">
+          Workout4
+        </div>
+      </div>
+    </div>
+
+<!-- The Inital Form -->
+<div class="hidden fixed" id="initalForm">
+  <div class="flex flex-wrap justify-center items-center border">
+    <div>
+      <button class="border p-16 m-4" onclick="">Strength</button>
+    </div>
+    <div>
+      <button class="border p-16 m-4" onclick="">Cardio</button>
+    </div>
+    <div>
+      <button class="border p-16 m-4" onclick="">Yoga</button>
+    </div>
+  </div>
+  <!-- <form action="/post/createPost" method="POST" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button> -->
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+  </div>
+<!-- <div class="container">
   <div class="row mt-5">
       <div class="col-6">
           <div>
@@ -42,5 +94,5 @@
       </div>  
     </div>
   </div>
-</div>
+</div> -->
 <%- include('partials/footer') -%>
