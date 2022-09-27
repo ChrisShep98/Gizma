@@ -29,13 +29,17 @@ module.exports = {
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
-      const result = await cloudinary.uploader.upload(req.file.path);
+      // const result = await cloudinary.uploader.upload(req.file.path);
 
       await Post.create({
         title: req.body.title,
-        image: result.secure_url,
-        cloudinaryId: result.public_id,
-        caption: req.body.caption,
+        description: req.body.description,
+        workout: {
+          exercise: req.body.exercise,
+          sets: req.body.sets,
+          reps: req.body.reps
+        },
+        // workout: [req.body.exercise, req.body.sets, req.body.reps],
         likes: 0,
         user: req.user.id,
       });
