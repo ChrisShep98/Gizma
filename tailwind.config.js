@@ -37,7 +37,10 @@ module.exports = {
       },
       backgroundImage: {
         'bglogin': "url('/imgs/bgphoto2.jpg')"
-      }
+      },
+      width: {
+        popup: '48rem'
+      },
     },
   },
   plugins: [],

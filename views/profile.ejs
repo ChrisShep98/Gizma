@@ -1,5 +1,5 @@
 <%- include('partials/headerloggedin') -%>
-  <div class="container mx-auto min-h-screen bg-red-300">
+  <div class="container mx-auto min-h-screen bg-red-300" id="fullpage">
       <div class="flex justify-around p-20">
         <button onclick="openInitalForm()" class="px-6 py-3 text-lg bg-slate-700 text-white">Create</button>
         <p>Profile info here</p>
@@ -21,10 +21,14 @@
             </div>
         <% } %>
       </div>
-
+    </div>
 <!-- The Inital Form -->
-<div class="hidden fixed" id="initalForm">
-  <div class="flex flex-wrap justify-center items-center border">
+<!-- in div below make sure ml is half of what you set the w and mt is half of what you set the h -->
+<div class="hidden absolute bg-white w-popup top-1/2 left-1/2 -ml-96 -mt-72 shadow-sm rounded-lg" id="initalForm">
+  <div class="container mx-auto flex flex-wrap justify-center items-center">
+    <div class="container flex justify-center">
+      <span class="p-4">Please selete your type of plan:</span>
+    </div>
     <div>
       <button class="border p-16 m-4" onclick="openStrengthForm()">Strength</button>
     </div>
@@ -36,37 +40,42 @@
     </div>
   </div>
 </div>
-
-<div class="hidden" id="strengthForm">
-  <div class="">
+<!-- in div below make sure ml is half of what you set the w and mt is half of what you set the h -->
+<div class="hidden absolute z-10 justify-center bg-white w-popup top-1/2 left-1/2 -ml-96 -mt-72 shadow-sm rounded-lg" id="strengthForm">
+  <div class="container mx-auto">
     <form action="/post/createPost" method="POST" class="">
-      <legend>Strength Plan</legend>
-      <div>
-        <label for="title">Plan title: </label>
-        <input type="text" placeholder="name" name="title">
+      <div class="flex justify-center">
+      <legend class="p-4">Strength Plan</legend>
+      </div>
+      <div class="flex justify-center">
+        <label for="" class="p-1">Plan title:</label>
+        <input type="text" name="title" class="border p-1 rounded-sm">
       </div>
 
-      <div class="exerciseInput">
-        <label for="fullworkout" class="exerciseLabel">Exercise: </label>
-        <input type="text" placeholder="Exercise name" class="exercise" name="exercise">
-        <input type="number" placeholder="# of sets" class="sets" name="sets">
-        <input type="number" placeholder="# of reps" class="reps" name="reps">
+      <div class="exerciseInput flex justify-center p-4">
+        <label for="fullworkout" class="exerciseLabel p-1">Exercise:</label>
+        <input type="text" placeholder="Exercise name" class="exercise border p-1 rounded-sm" name="exercise">
+        <label for="fullworkout" class="exerciseLabel p-1">Sets:</label>
+        <input type="number" class="sets w-10 border p-1 rounded-sm" name="sets">
+        <label for="fullworkout" class="exerciseLabel p-1">Reps:</label>
+        <input type="number" class="reps w-10 border p-1 rounded-sm" name="reps">
       </div>
 
-      <div>
-        <textarea placeholder="Description" id="description" name="description"></textarea>
+      <div class="flex justify-center">
+        <textarea class="w-80 p-1 m-4 border rounded-sm" placeholder="Description" id="description" name="description"></textarea>
       </div>
-      
-      <button type="submit" class="" value="Upload">Submit</button>
+      <div class="flex justify-center">
+        <button type="submit" class="" value="Upload">Submit</button>
+      </div>
     </form>
-    <button class="addexercise">ADD+</button>
+    <button class="addexercise m-5">Add exercise</button>
 
   </div>
 </div>
 
 <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
 
-</div>
+
 <!-- <div class="container">
   <div class="row mt-5">
       <div class="col-6">

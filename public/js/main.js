@@ -13,8 +13,10 @@ const togglePassword = document.querySelectorAll('.togglePassword').forEach(item
 // Popup form for creating a workout
 
 function openInitalForm() {
-    document.getElementById("initalForm").style.display = "block";
+    document.getElementById("initalForm").style.display = "flex";
     document.getElementById("strengthForm").style.display = "none";
+    document.getElementById("fullpage").style.backgroundColor = "rgba(22,22,22,0.5)"
+    document.getElementById("fullpage").style.filter = "blur(2px)"
   }
   
 function closeForm() {
@@ -33,15 +35,6 @@ const addEx = document.querySelector('.addexercise').addEventListener('click', a
 
 function addexercise(){
     let copyDiv = exerciseDiv.cloneNode(true)
-    console.log(copyDiv)
     exerciseDiv.after(copyDiv)
-    console.log(exerciseDiv)
 }
 
-
-
-// function addexercise(){
-//     exerciseName.appendChild(input).setAttribute('name', 'test')
-//     sets.appendChild(input).setAttribute('name', 'test')
-//     reps.append(input).setAttribute('name', 'test')
-// }
