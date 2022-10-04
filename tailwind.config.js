@@ -36,7 +36,9 @@ module.exports = {
         sourceSans: "'Source Sans Pro', sans-serif;"
       },
       backgroundImage: {
-        'bglogin': "url('/imgs/bgphoto2.jpg')"
+        'bglogin': "url('/imgs/bgphoto2.jpg')",
+        'bgProfile': "url('/imgs/emptygym.jpg')",
+        'bgStrength': "url('/imgs/arnold.jpg')"
       },
       width: {
         popup: '48rem'

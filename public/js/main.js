@@ -15,7 +15,6 @@ const togglePassword = document.querySelectorAll('.togglePassword').forEach(item
 function openInitalForm() {
     document.getElementById("initalForm").style.display = "flex";
     document.getElementById("strengthForm").style.display = "none";
-    document.getElementById("fullpage").style.backgroundColor = "rgba(22,22,22,0.5)"
     document.getElementById("fullpage").style.filter = "blur(2px)"
   }
   

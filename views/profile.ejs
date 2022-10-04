@@ -1,5 +1,5 @@
 <%- include('partials/headerloggedin') -%>
-  <div class="container mx-auto min-h-screen bg-red-300" id="fullpage">
+  <div class="container mx-auto min-h-screen bg-no-repeat bg-cover bg-[url('/imgs/emptygym.jpg')]" id="fullpage">
       <div class="flex justify-around p-20">
         <button onclick="openInitalForm()" class="px-6 py-3 text-lg bg-slate-700 text-white">Create</button>
         <p>Profile info here</p>
@@ -9,7 +9,7 @@
       </div>
       <div class="flex flex-wrap justify-center">
           <% for(var i = 0; i < posts.length; i++) {%>
-            <div class="border m-4 text-center w-48 h-40 flex items-start justify-center">
+            <div class="border m-4 text-center w-48 h-40 flex items-start justify-center bg-white rounded-sm">
               <a href="/post/<%= posts[i]._id%>">
                 <div>
                   <h2>Strength</h2>
@@ -24,7 +24,7 @@
     </div>
 <!-- The Inital Form -->
 <!-- in div below make sure ml is half of what you set the w and mt is half of what you set the h -->
-<div class="hidden absolute bg-white w-popup top-1/2 left-1/2 -ml-96 -mt-72 shadow-sm rounded-lg" id="initalForm">
+<div class="hidden absolute bg-white w-popup top-1/2 left-1/2 -ml-96 -mt-72 shadow-md rounded-lg" id="initalForm">
   <div class="container mx-auto flex flex-wrap justify-center items-center">
     <div class="container flex justify-center">
       <span class="p-4">Please selete your type of plan:</span>
@@ -41,7 +41,7 @@
   </div>
 </div>
 <!-- in div below make sure ml is half of what you set the w and mt is half of what you set the h -->
-<div class="hidden absolute z-10 justify-center bg-white w-popup top-1/2 left-1/2 -ml-96 -mt-72 shadow-sm rounded-lg" id="strengthForm">
+<div class="hidden absolute z-10 justify-center bg-cover bg-[url('/imgs/arnold.jpg')] w-popup top-1/2 left-1/2 -ml-96 -mt-72 shadow-md rounded-lg" id="strengthForm">
   <div class="container mx-auto">
     <form action="/post/createPost" method="POST" class="">
       <div class="flex justify-center">
