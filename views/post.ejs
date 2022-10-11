@@ -34,7 +34,7 @@
 
 <main>
   <div class="container mx-auto flex justify-center items-center">
-      <div class="bg-blue-400 p-8 mb-60 rounded-lg shadow-2xl">
+      <div class="bg-blue-400 m-7 p-8 rounded-lg shadow-2xl">
           <div class="flex justify-center">
             <h1><%= post.title %></h1>
           </div>
@@ -45,6 +45,25 @@
           </div>
           <div class="max-w-lg">
             <p><%= post.description %></p>
+          </div>
+          <div class="flex justify-start">
+            <form
+              class=""
+              action="/post/likePost/<%= post.id %>?_method=PUT"
+              method="POST"
+            >
+              <button class="fa fa-heart" type="submit">Like</button>
+            </form>
+            <h3 class="">Likes: <%= post.likes %></h3>
+            <%if(post.user == user.id){ %>
+            <form
+              action="/post/deletePost/<%= post.id %>?_method=DELETE"
+              method="POST"
+              class="flex"
+            >
+              <button class="btn btn-primary fa fa-trash" type="submit">Delete</button>
+            </form>
+            <%}%>
           </div>
       </div>
   </div>
