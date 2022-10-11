@@ -1,15 +1,55 @@
 <%- include('partials/headerloggedin') -%>
-<div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
+<!-- <div class="container mx-auto">
+  <div class="">
+    <div class="flex justify-center p-3 border">
       <h1><%= post.title %></h1>
+    </div>
+    <div class="list-none space-y-7">
       <% for(var i=0; i<post.workout.exercise.length; i++) {%>
-        <div class="col-6 justify-content-between mt-5">
-          <li><%= post.workout.exercise[i] %></li>
-          <li><%= post.workout.sets[i] %></li>
-          <li><%= post.workout.reps[i] %></li>
+        <div class="flex justify-center">
+          <li><%= post.workout.exercise[i] %> - Sets: <%= post.workout.sets[i] %> Reps: <%= post.workout.reps[i] %> </li>
         </div>
       <% } %>
+      <div class="">
+        <li><%= post.description %></li>
+      </div>
+    </div>
+  </div> -->
+
+
+<!-- <div class="">
+  <div class="border flex justify-center text-center bg-blue-300">
+    <div class="">
+      <h1><%= post.title %></h1>
+    <div class="list-none">
+      <% for(var i=0; i<post.workout.exercise.length; i++) {%>
+          <li><%= post.workout.exercise[i] %> - Sets: <%= post.workout.sets[i] %> Reps: <%= post.workout.reps[i] %> </li>
+      <% } %>
+      <li class="mx-40"><%= post.description %></li>
+    </div>
+  </div>
+</div>
+</div> -->
+
+
+<main>
+  <div class="container mx-auto flex justify-center items-center">
+      <div class="bg-blue-400 p-8 mb-60 rounded-lg shadow-2xl">
+          <div class="flex justify-center">
+            <h1><%= post.title %></h1>
+          </div>
+          <div class="list-none flex flex-col items-center space-y-4 m-7">
+            <% for(var i=0; i<post.workout.exercise.length; i++) {%>
+                <li><%= post.workout.exercise[i] %> - Sets: <%= post.workout.sets[i] %> Reps: <%= post.workout.reps[i] %> </li>
+            <% } %>
+          </div>
+          <div class="max-w-lg">
+            <p><%= post.description %></p>
+          </div>
+      </div>
+  </div>
+</main>
+
       <!-- <img class="img-fluid" src="<%= post.image%>" /> -->
       <div class="row justify-content-between">
         <form
@@ -30,12 +70,10 @@
         </form>
         <%}%>
       </div>
-    </div>
     <div class="col-6 mt-5">
       <a class="btn btn-primary" href="/profile">Return to Profile</a>
       <a class="btn btn-primary" href="/feed">Return to Feed</a>
     </div>
-  </div>
 </div>
 
 <%- include('partials/footer') -%>
