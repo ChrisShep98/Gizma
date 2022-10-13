@@ -65,10 +65,10 @@ module.exports = {
   },
   deletePost: async (req, res) => {
     try {
-      // Find post by id // screws up delete of post
-      let post = await Post.findById({ _id: req.params.id });
-      // Delete image from cloudinary // screws up delete of post
-      await cloudinary.uploader.destroy(post.cloudinaryId);
+      // // Find post by id // screws up delete of post
+      // let post = await Post.findById({ _id: req.params.id });
+      // // Delete image from cloudinary // screws up delete of post
+      // await cloudinary.uploader.destroy(post.cloudinaryId);
       // Delete post from db
       await Post.remove({ _id: req.params.id });
       console.log("Deleted Post");
