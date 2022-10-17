@@ -29,11 +29,12 @@ function openStrengthForm(){
 
 // Add exercise to plan
 
+const addEx = document.querySelector('.addexercise').addEventListener('click', addExercise)
 const exerciseDiv = document.querySelector('.exerciseInput')
-const addEx = document.querySelector('.addexercise').addEventListener('click', addexercise)
+const copyDiv = exerciseDiv.cloneNode(true)
 
-function addexercise(){
-    let copyDiv = exerciseDiv.cloneNode(true)
-    exerciseDiv.after(copyDiv)
+function addExercise(){
+    const emptyValCopy = copyDiv.cloneNode(true)
+    exerciseDiv.after(emptyValCopy)
 }
 
