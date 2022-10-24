@@ -1,15 +1,18 @@
 <%- include('partials/headerloggedin') -%>
-  <div class="container">
-    <div class="row justify-content-center mt-5">
-      <ul class="row list-unstyled">
+  <div class="container mx-auto bg-blue-50">
+      <ul class=" flex flex-col items-center list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">test
-              <img class="img-fluid" src="<%= posts[i].image%>">
+          <li class="border m-4 text-center w-56 h-48 flex justify-center bg-white rounded-sm">
+            <a href="/post/<%= posts[i]._id%>">
+              <div>
+                <h2>Strength</h2>
+              </div>
+              <div class="mt-14">
+                <span><%= posts[i].title%></span>
+              </div>
             </a>
           </li>
         <% } %>
         </ul>
-    </div>
   </div>  
 <%- include('partials/footer') -%>
