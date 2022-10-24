@@ -635,6 +635,10 @@ video {
   margin-top: 9rem;
 }
 
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
 .-ml-96 {
   margin-left: -24rem;
 }
@@ -645,22 +649,6 @@ video {
 
 .mb-3 {
   margin-bottom: 0.75rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-9 {
-  margin-top: 2.25rem;
 }
 
 .flex {
@@ -677,10 +665,6 @@ video {
 
 .h-40 {
   height: 10rem;
-}
-
-.h-6 {
-  height: 1.5rem;
 }
 
 .min-h-screen {
@@ -725,10 +709,6 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-end {
@@ -777,8 +757,16 @@ video {
   border-radius: 0.125rem;
 }
 
+.rounded-picRadius {
+  border-radius: 50%;
+}
+
 .border {
   border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .bg-white {
@@ -809,8 +797,20 @@ video {
   background-image: url('/imgs/emptygym.jpg');
 }
 
+.bg-\[url\(\'\/imgs\/picOfMe\.jpg\'\)\] {
+  background-image: url('/imgs/picOfMe.jpg');
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.bg-picSize {
+  background-size: 150px;
+}
+
+.bg-picBgPos {
+  background-position: -163px -10px;
 }
 
 .bg-no-repeat {
@@ -837,12 +837,16 @@ video {
   padding: 2rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-20 {
   padding: 5rem;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-picOfMePadding {
+  padding: 50px 60px;
 }
 
 .p-16 {
@@ -970,22 +974,6 @@ video {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.hover\:m-6:hover {
-  margin: 1.5rem;
-}
-
-.hover\:h-44:hover {
-  height: 11rem;
-}
-
-.hover\:w-52:hover {
-  width: 13rem;
-}
-
-.hover\:p-9:hover {
-  padding: 2.25rem;
 }
 
 .hover\:text-darkGrayishBlue:hover {

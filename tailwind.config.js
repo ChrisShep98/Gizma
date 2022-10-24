@@ -38,11 +38,24 @@ module.exports = {
       backgroundImage: {
         'bglogin': "url('/imgs/bgphoto2.jpg')",
         'bgProfile': "url('/imgs/emptygym.jpg')",
-        'bgStrength': "url('/imgs/arnold.jpg')"
+        'bgStrength': "url('/imgs/arnold.jpg')",
+        'profilePicEx': "url('/imgs/picOfMe.jpg"
       },
       width: {
         popup: '48rem'
       },
+      padding: {
+        picOfMePadding: '50px 60px'
+      },
+      borderRadius: {
+        picRadius: '50%'
+      },
+      backgroundPosition:{
+        picBgPos: '-163px -10px'
+      },
+      backgroundSize:{
+        picSize: '150px'
+      }
     },
   },
   plugins: [],
