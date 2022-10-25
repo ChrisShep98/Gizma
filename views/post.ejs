@@ -33,6 +33,13 @@
 
 
 <main class="container mx-auto bg-blue-50 min-h-screen">
+  <!-- <strong><%= user.userName %></strong>
+  <strong><%= user.id %></strong>
+  <% for(var i=0; i<comments.length; i++) {%>
+    <% if(comments[i].user == user.id){ %>
+      <strong><%= user.userName %></strong>
+  <% } %>
+  <% } %> -->
   <div class="flex justify-center items-center">
       <div class="bg-white m-7 p-8 pb-0 rounded-lg shadow-sm mt-36">
           <div class="flex justify-center">
@@ -62,18 +69,14 @@
           <div class="space-y-4">
 
             <div class="flex">
-              <!-- <div class="flex-shrink-0 mr-3">
-                <img class="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10" src="https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="">
-              </div> -->
-              <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
-                <!-- <% for(var i=0; i<comments.length; i++) {%>
-                  if(comment.id == user.id)
-                <% } %>
-                <strong><%= user.userName %></strong> -->
+              <div class="flex-1 border rounded-lg px-4 pb-3 sm:px-6 leading-relaxed">
                 <ul class="">
                   <% for(var i=0; i<comments.length; i++) {%>
                     <li class="col-6 justify-content-between mt-5 text-sm">
-                      <%= comments[i].comment %>  
+                      <%if(comments[i].user == user.id){ %>
+                        <strong><%= user.userName %></strong>
+                        <%= comments[i].comment %>
+                    <% } %>
                     </li>
                   <% } %>
                   </ul>
@@ -81,19 +84,11 @@
             </div>
           </div>
         </div>
-        <!-- <ul class="list-inline">
-          <% for(var i=0; i<comments.length; i++) {%>
-            <li class="col-6 justify-content-between mt-5">
-              <%= comments[i].comment %>  
-            </li>
-          <% } %>
-        </ul> -->
         <form action="/comment/createComment/<%=post._id%>" method="POST" class="w-full max-w-xl bg-white rounded-lg px-4 py-1 shadow-sm">
            <div class="flex flex-wrap -mx-3 mb-6">
               <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Add a new comment</h2>
               <div class="w-full md:w-full px-3 mb-2 mt-2">
                  <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 placeholder-gray-500 focus:outline-none focus:bg-white" name="comment" placeholder='Type Your Comment' required></textarea>
-                 <!-- <input type="text" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 placeholder-gray-500 focus:outline-none focus:bg-white" placeholder="Type Your Comment" name="comment" required> -->
               </div>
               <div class="w-full md:w-full flex items-start px-3">
                  <div class="-mr-1">
@@ -115,23 +110,6 @@
   </form>
   </div>
 <%}%>
-<div class="border">
-  <h2>Add a comment</h2>
-  <form action="/comment/createComment/<%=post._id%>" method="POST">
-    <div class="mb-3">
-        <label for="comment" class="form-label"></label>
-        <input type="text" class="form-control" placeholder="Comment" id="comment" name="comment">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-<ul class="list-inline">
-  <% for(var i=0; i<comments.length; i++) {%>
-    <li class="col-6 justify-content-between mt-5">
-      <%= comments[i].comment %>  
-    </li>
-  <% } %>
-  </ul>
 </main>
       <!-- <img class="img-fluid" src="<%= post.image%>" /> -->
       <!-- <div class="row justify-content-between">
