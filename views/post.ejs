@@ -1,47 +1,7 @@
 <%- include('partials/headerloggedin') -%>
-<!-- <div class="container mx-auto">
-  <div class="">
-    <div class="flex justify-center p-3 border">
-      <h1><%= post.title %></h1>
-    </div>
-    <div class="list-none space-y-7">
-      <% for(var i=0; i<post.workout.exercise.length; i++) {%>
-        <div class="flex justify-center">
-          <li><%= post.workout.exercise[i] %> - Sets: <%= post.workout.sets[i] %> Reps: <%= post.workout.reps[i] %> </li>
-        </div>
-      <% } %>
-      <div class="">
-        <li><%= post.description %></li>
-      </div>
-    </div>
-  </div> -->
-
-
-<!-- <div class="">
-  <div class="border flex justify-center text-center bg-blue-300">
-    <div class="">
-      <h1><%= post.title %></h1>
-    <div class="list-none">
-      <% for(var i=0; i<post.workout.exercise.length; i++) {%>
-          <li><%= post.workout.exercise[i] %> - Sets: <%= post.workout.sets[i] %> Reps: <%= post.workout.reps[i] %> </li>
-      <% } %>
-      <li class="mx-40"><%= post.description %></li>
-    </div>
-  </div>
-</div>
-</div> -->
-
-
 <main class="container mx-auto bg-blue-50 min-h-screen">
-  <!-- <strong><%= user.userName %></strong>
-  <strong><%= user.id %></strong>
-  <% for(var i=0; i<comments.length; i++) {%>
-    <% if(comments[i].user == user.id){ %>
-      <strong><%= user.userName %></strong>
-  <% } %>
-  <% } %> -->
   <div class="flex justify-center items-center">
-      <div class="bg-white m-7 p-8 pb-0 rounded-lg shadow-sm mt-36">
+      <div class="bg-white m-7 p-8 pb-0 rounded-lg mt-16 mb-5">
           <div class="flex justify-center">
             <h1><%= post.title %></h1>
           </div>
@@ -62,14 +22,13 @@
             <h3 class=""> # <%= post.likes %></h3>
           </div>
       </div>
-      <div class="items-center justify-center mt-64 mb-4 max-w-md">
+      <div class="items-center justify-center mt-32 mb-4 max-w-md">
         <div class="antialiased mx-auto max-w-screen-sm">
           <h3 class="mb-4 text-lg font-semibold text-gray-900">Comments</h3>
-        
-          <div class="space-y-4">
+          <div class="space-y-4 overflow-y-scroll h-60 bg-white rounded-lg">
 
             <div class="flex">
-              <div class="flex-1 border rounded-lg px-4 pb-3 sm:px-6 leading-relaxed">
+              <div class="flex-1 rounded-lg px-4 pb-3 sm:px-6 leading-relaxed">
                 <ul class="">
                   <% for(var i=0; i<comments.length; i++) {%>
                     <li class="col-6 justify-content-between mt-5 text-sm">
@@ -85,10 +44,10 @@
           </div>
         </div>
         <form action="/comment/createComment/<%=post._id%>" method="POST" class="w-full max-w-xl bg-white rounded-lg px-4 py-1 shadow-sm">
-           <div class="flex flex-wrap -mx-3 mb-6">
+           <div class="flex flex-wrap -mx-3 mb-3">
               <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Add a new comment</h2>
-              <div class="w-full md:w-full px-3 mb-2 mt-2">
-                 <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 placeholder-gray-500 focus:outline-none focus:bg-white" name="comment" placeholder='Type Your Comment' required></textarea>
+              <div class="w-full md:w-3/4 px-3 mb-2 mt-2">
+                 <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-14 py-2 px-3 placeholder-gray-500 focus:outline-none focus:bg-white" name="comment" placeholder='Type Your Comment' required></textarea>
               </div>
               <div class="w-full md:w-full flex items-start px-3">
                  <div class="-mr-1">
