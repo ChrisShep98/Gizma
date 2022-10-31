@@ -41,9 +41,9 @@ module.exports = {
           sets: req.body.sets,
           reps: req.body.reps
         },
-        // workout: [req.body.exercise, req.body.sets, req.body.reps],
         likes: 0,
         user: req.user.id,
+        userName: req.user.userName
       });
       console.log("Post has been added!");
       res.redirect("/profile");
