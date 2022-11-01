@@ -38,7 +38,7 @@ module.exports = {
       backgroundImage: {
         'bglogin': "url('/imgs/bgphoto2.jpg')",
         'bgProfile': "url('/imgs/emptygym.jpg')",
-        'bgStrength': "url('/imgs/arnold.jpg')",
+        'bgStrength': "url('/imgs/dumbell.jpg')",
         'profilePicEx': "url('/imgs/picOfMe.jpg"
       },
       width: {

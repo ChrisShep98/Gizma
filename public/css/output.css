@@ -890,6 +890,10 @@ video {
   background-image: url('/imgs/picOfMe.jpg');
 }
 
+.bg-\[url\(\'\/imgs\/dumbell\.jpg\'\)\] {
+  background-image: url('/imgs/dumbell.jpg');
+}
+
 .bg-cover {
   background-size: cover;
 }
