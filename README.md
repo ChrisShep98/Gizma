@@ -6,7 +6,7 @@
 
 # Features soon to be
 - The abiliy for users to upload profile pictures and a description for their profile.
-- Users being able to follow/unfollow other accounts, allowing for a more personalized feed section.
+- the ability for users to follow/unfollow other accounts, allowing for a more personalized feed section.
 
 # Install
 
