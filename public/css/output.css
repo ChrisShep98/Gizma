@@ -911,10 +911,6 @@ video {
   background-image: url('/imgs/picOfMe.jpg');
 }
 
-.bg-\[url\(\'\/imgs\/postBg\.jpg\'\)\] {
-  background-image: url('/imgs/postBg.jpg');
-}
-
 .bg-cover {
   background-size: cover;
 }

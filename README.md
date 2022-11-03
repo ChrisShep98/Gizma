@@ -1,8 +1,8 @@
 # About
 
 - Gizma is a fullstack social media application that allows users to post their custom workouts.
-- Users are able to view posts from other uses in the Home/Feed section, and have the ability to like and comment on posts.
-- The application is built with authentication for all users with a the npm passport package.
+- Users are able to view posts from other users in the Home/Feed section, and have the ability to like and comment on posts.
+- The application is built with authentication for all users using passport.
 
 # Features soon to be
 - The abiliy for users to upload profile pictures and a description for their profile.
