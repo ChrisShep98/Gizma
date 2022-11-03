@@ -20,6 +20,7 @@ function openInitalForm() {
   
 function closeForm() {
     document.getElementById("initalForm").style.display = "none";
+    document.getElementById("fullpage").style.filter = "blur(0px)"
   }
 
 function openStrengthForm(){
