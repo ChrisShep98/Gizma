@@ -899,6 +899,10 @@ video {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'\/imgs\/feedBg\.jpg\'\)\] {
+  background-image: url('/imgs/feedBg.jpg');
+}
+
 .bg-\[url\(\'\/imgs\/bgphoto2\.jpg\'\)\] {
   background-image: url('/imgs/bgphoto2.jpg');
 }
@@ -907,12 +911,16 @@ video {
   background-image: url('/imgs/dumbell.jpg');
 }
 
-.bg-\[url\(\'\/imgs\/emptygym\.jpg\'\)\] {
-  background-image: url('/imgs/emptygym.jpg');
+.bg-\[url\(\'\/imgs\/profileBg\.jpg\'\)\] {
+  background-image: url('/imgs/profileBg.jpg');
 }
 
 .bg-\[url\(\'\/imgs\/picOfMe\.jpg\'\)\] {
   background-image: url('/imgs/picOfMe.jpg');
+}
+
+.bg-\[url\(\'\/imgs\/postBg\.jpg\'\)\] {
+  background-image: url('/imgs/postBg.jpg');
 }
 
 .bg-cover {

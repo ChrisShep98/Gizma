@@ -39,7 +39,10 @@ module.exports = {
         'bglogin': "url('/imgs/bgphoto2.jpg')",
         'bgProfile': "url('/imgs/emptygym.jpg')",
         'bgStrength': "url('/imgs/dumbell.jpg')",
-        'profilePicEx': "url('/imgs/picOfMe.jpg"
+        'profilePicEx': "url('/imgs/picOfMe.jpg",
+        'feedPic': "url('/imgs/feedBg.jpg",
+        'profileBg': "url('/imgs/profileBg.jpg",
+        'postBg': "url('/imgs/postBg.jpg"
       },
       width: {
         popup: '48rem'
