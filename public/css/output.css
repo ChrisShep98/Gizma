@@ -907,14 +907,6 @@ video {
   background-image: url('/imgs/bgphoto2.jpg');
 }
 
-.bg-\[url\(\'\/imgs\/dumbell\.jpg\'\)\] {
-  background-image: url('/imgs/dumbell.jpg');
-}
-
-.bg-\[url\(\'\/imgs\/profileBg\.jpg\'\)\] {
-  background-image: url('/imgs/profileBg.jpg');
-}
-
 .bg-\[url\(\'\/imgs\/picOfMe\.jpg\'\)\] {
   background-image: url('/imgs/picOfMe.jpg');
 }
