@@ -5,8 +5,8 @@
 - The application is built with authentication for all users using passport.
 
 # Features soon to be
-- The abiliy for users to upload profile pictures and a description for their profile.
-- the ability for users to follow/unfollow other accounts, allowing for a more personalized feed section.
+- The ability for users to upload profile pictures and a description for their profile.
+- The ability for users to follow/unfollow other accounts, allowing for a more personalized feed section.
 
 # Install
 
